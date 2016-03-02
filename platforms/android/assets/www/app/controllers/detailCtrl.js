@@ -1,0 +1,46 @@
+'use strict';
+angular.module('codeSearch')
+.controller('detailCtrl',function($scope){
+    $scope.codes = [
+        {
+            name:"html",
+            from:"html",
+        },
+        {
+            name:"head",
+            from:"html"
+        },
+        {
+            name:"body",
+            from:"html"
+        },
+        {
+            name:"script",
+            from:"html"
+        },
+        {
+            name:"position",
+            from:"css"
+        },
+        {
+            name:"font-size",
+            from:"css"
+        },
+        {
+            name:"alert",
+            from:"javascript"
+        },
+        {
+            name:"var",
+            from:"javascript"
+        },
+        {
+            name:"for",
+            from:"javascript"
+        },
+        {
+            name:"if",
+            from:"javascript"
+        }
+    ];
+});
