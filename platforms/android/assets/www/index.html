@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="lib/angular/angular-material.min.css">
     <link rel="stylesheet" href="css/design.css">
     <link href="img/icon/material-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/jqueryMobile/jquery.mobile-1.4.5.min.css">
 
   </head>
   <body ng-controller="mainCtrl" ng-cloak>
+      
+      
     <div class="app">
       <!--side bar-->
       <div ng-controller="sideCtrl" ng-include="'view/sideBar.html'"></div>
-      <!--header-->
-      <div ng-controller="headerCtrl as ctrl" ng-include="'view/header.html'"></div> 
-      <!--detail-->
-      <div class="detailMargin" ng-controller="detailCtrl" ng-include="'view/detail.html'"></div>   
+      <!--header and detail-->
+      <div ng-view></div>
+
+      </div> 
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
     
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <!--Jquery Mobile Dependencies-->
+    <script src="lib/jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
     <!-- Angular Material Dependencies -->
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular/angular-animate.min.js"></script>
@@ -27,11 +33,10 @@
     <script src="lib/angular/angular-material.min.js"></script>
     <script src="lib/angular/angular-touch.min.js"></script>
     <script src="lib/angular/angular-messages.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
     
     <!--module and controllers-->
     <script src="app/app.js"></script>
-    <script src="app/controllers/fabCtrl.js"></script>
-    <script src="app/controllers/headerCtrl.js"></script>
     <script src="app/controllers/sideCtrl.js"></script>
     <script src="app/controllers/detailCtrl.js"></script>
   </body>
