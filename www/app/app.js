@@ -16,7 +16,7 @@ angular.module('codeSearch',['ngMaterial','ngRoute'])
       
     }
     //code of side bar end
-    
+
 
 
 }).config(function($routeProvider) {
@@ -26,10 +26,15 @@ angular.module('codeSearch',['ngMaterial','ngRoute'])
       templateUrl : 'view/detail.html',
       controller  : 'detailCtrl'
     })
-    .when('/detail', {
-      templateUrl : 'view/codeDetail.html',
+    .when('/about', {
+      templateUrl : 'view/about.html',
       controller  : 'detailCtrl'
+    })
+    .when('/detail', {
+      templateUrl : 'view/codeDetail.html'
+      //controller  : 'detailCtrl'
     });
 });
+
 
 })()
