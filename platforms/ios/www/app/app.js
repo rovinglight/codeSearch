@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 
-angular.module('codeSearch',['ngMaterial'])
+angular.module('codeSearch',['ngMaterial','ngRoute'])
 
 .controller('mainCtrl',function($scope,$timeout, $mdSidenav, $log){
 
@@ -16,9 +16,25 @@ angular.module('codeSearch',['ngMaterial'])
       
     }
     //code of side bar end
-    
 
 
+
+}).config(function($routeProvider) {
+  $routeProvider
+
+    .when('/', {
+      templateUrl : 'view/detail.html',
+      controller  : 'detailCtrl'
+    })
+    .when('/about', {
+      templateUrl : 'view/about.html',
+      controller  : 'detailCtrl'
+    })
+    .when('/detail', {
+      templateUrl : 'view/codeDetail.html'
+      //controller  : 'detailCtrl'
+    });
 });
+
 
 })()
